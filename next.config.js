@@ -1,4 +1,5 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {}
+const withSplit = require('next-with-split').withSplit({})
 
-module.exports = nextConfig
+module.export = withSplit({
+  reactStrictMode: true,
+})
