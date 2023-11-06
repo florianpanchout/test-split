@@ -12,9 +12,9 @@ const withSplit = require('next-with-split').withSplit({
       }
     },
   },
-  isOriginal: true,
-  hostname: 'test-split.vercel.app',
-  currentBranch: 'main'
+  isOriginal: false,
+  hostname: 'test-split-git-challenger-nos-gestes-climat.vercel.app',
+  currentBranch: 'challenger'
 })
 
 module.export = withSplit({
