@@ -3,7 +3,7 @@ import type { NextRequest } from 'next/server'
 import type { NextMiddlewareResult } from 'next/dist/server/web/types'
 
 export const middleware = (req: NextRequest): NextMiddlewareResult => {
-  const rewriteTo = `https://test-split.vercel.app/`
+  const rewriteTo = `https://test-split.vercel.app/${req.nextUrl.href.replace(req.nextUrl.origin, '')}`
   const isExternal = rewriteTo.startsWith('http')
 
   if (isExternal) return NextResponse.rewrite(rewriteTo)
